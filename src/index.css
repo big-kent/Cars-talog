@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main-green{
+  background-color: #004225;
+}
+.clamp-text-1{
+  font-size: clamp(0.5rem, 0.4000rem + 0.4444vw, 0.8rem);
+}
+.clamp-text-2 {
+  font-size: clamp(0.6rem, 0.4667rem + 0.5926vw, 1rem);
+}
+.clamp-logo{
+  width: clamp(5rem, 6.6667rem + 14.8148vw, 50rem);
+  height: auto;
+
+}
+
+@layer components{
+  .footer-link{
+    @apply text-white font-light hover:underline;
+  }
+}
