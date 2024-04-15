@@ -1,6 +1,6 @@
-import Header from "./Header";
-import Footer from "./Footer";
-import DetailPage from "./DetailPage";
+import Header from "./layouts/Header";
+import Footer from "./layouts/Footer";
+import DetailPage from "./components/DetailPage";
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 

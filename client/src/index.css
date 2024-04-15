@@ -8,6 +8,8 @@
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -34,6 +36,40 @@ code {
   width: clamp(5rem, 6.6667rem + 14.8148vw, 50rem);
   height: auto;
 
+}
+.clamp-h1{
+  font-size: clamp(2rem, 0.5915rem + 6.0094vw, 6rem);
+}
+.clamp-overall{
+  width: clamp(0.6rem, 0.4667rem + 0.5926vw, 1rem);
+  height: clamp(0.6rem, 0.4667rem + 0.5926vw, 1rem);
+}
+.m-center{
+  margin: 0 auto;
+}
+.each-slide-effect > div {
+  border: 10px solid black;
+}
+
+.indicator {
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  border: 1px #666 solid;
+  border-radius: 50%;
+  margin: 15px;
+  width: clamp(0.6rem, 0.4667rem + 0.5926vw, 1rem);
+  height: clamp(0.6rem, 0.4667rem + 0.5926vw, 1rem);
+}
+
+.indicator.active {
+  color: #fff;
+  background: #000000;
+}
+
+.max-carousel{
+  width: 100vw;
+  height: auto;
 }
 
 @layer components{
