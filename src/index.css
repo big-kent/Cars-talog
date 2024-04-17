@@ -16,6 +16,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
@@ -49,6 +50,9 @@ code {
 }
 .each-slide-effect > div {
   border: 10px solid black;
+}
+.mobile-grid-show {
+  grid-template-rows: 1fr 2fr 1fr 2fr;
 }
 
 .indicator {

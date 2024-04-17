@@ -20,8 +20,8 @@ const Brands = ['Ferrari', 'Mercedes-Benz', 'Porsche', 'Huyndai', 'Toyota', 'For
 function Footer() {
     return (
         <>
-            <footer className = 'flex flex-col main-green h-auto justify-center gap-7 md:flex-row-reverse md:gap-20'>
-                <div className ='flex flex-col items-center gap-7 md:gap-20 md:flex-row'>
+            <footer className = 'flex flex-col main-green h-auto justify-center gap-7 max-w-full md:flex-row-reverse md:gap-20'>
+                <div className ='flex flex-col items-center gap-7 pt-10 md:gap-20 md:flex-row'>
                     <div className='flex flex-col items-center clamp-text-2'>
                         {FooterLink1.map((footerLink) => (
                             <Link to='/' className = "footer-link">{footerLink}</Link>
@@ -61,7 +61,7 @@ function Footer() {
                     </div>
                 </div>
                 
-                <div className="flex flex-row justify-around items-center md:flex-col md:justify-center md:items-center">
+                <div className="flex flex-row justify-around items-center gap-3 md:flex-col md:justify-center md:items-center">
                     <Logo className = 'clamp-logo'/>
                     <div className='contact-us flex justify-center items-center'>
                         <Link to='/' className = "ml-2 text-white font-light clamp-text-1">FB</Link>
