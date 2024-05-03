@@ -1,30 +1,27 @@
-import Header from "./layouts/Header";
-import Footer from "./layouts/Footer";
-import DetailPage from "./components/DetailPage";
+import  Header  from "./layouts/Header";
+
+import DetailPage from "./components/DetailPage/DetailPage";
+import SignUp from "./components/LoginPage/SignUp";
+import LogIn from "./components/LoginPage/LogIn";
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
 function App() {
-
- /*  const theme = createTheme({
-  palette: {
-      primary: {
-        main: '#004225', // Purple and green play nicely together.
-    }
-    
-  },
-}); */
 
 
   return (
-      <Router>
-        <div className="App">
-          <DetailPage></DetailPage>
-          <Footer></Footer>
+    <Router>
+      <div className ="App">
+        <div className ="content">
+          <Header />
+            <Routes>
+              <Route path="/detail" element={<DetailPage/>}></Route>
+              <Route path="/signup" element={<SignUp/>}></Route>
+              <Route path="/login" element={<LogIn/>}></Route>
+            </Routes>
         </div>
-      </Router>
+      </div>
+    </Router>
   )
 }
 

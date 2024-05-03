@@ -8,10 +8,11 @@ import Typography from '@mui/material/Typography';
 
 
 
-import { ReactComponent as BannerImmage } from '..//assets/images/Car Image.svg';
+import { ReactComponent as BannerImmage } from '../../assets/images/Car Image.svg';
 
 import { Slide } from 'react-slideshow-image';
 import { Zoom } from 'react-slideshow-image';
+import theme from '../Theme';
 
 import 'react-slideshow-image/dist/styles.css';
 
@@ -29,9 +30,10 @@ const DotsStepper = () => {
 
     return (
         <>
-            <div className = 'relative'> 
-                <h1 className ='absolute z-10 font-black text-white right-1/4 bottom-1/4 clamp-h1'>車 name</h1>
-                    <Slide {...buttonProperties} indicators={index => <div className="indicator"></div>} scale={1} duration='2000'>
+            <div className='relative'> 
+                <Typography theme={theme} variant='h1' style={{ position: 'absolute', zIndex: '10', color:'white', bottom: '10rem', right: '5rem', align: 'center', marginTop: '2rem', fontFamily: 'Arvo', fontStyle: 'serif', textTransform: 'uppercase'}}>車 name</Typography>
+                
+                    <Slide {...buttonProperties} indicators={index => <div className ="indicator"></div>} scale={1} duration='2000'>
                         <div className ="each-slide-effect">
                             <BannerImmage className ='max-carousel'/>
                         </div>
@@ -50,11 +52,7 @@ const DotsStepper = () => {
                         </div>
                     </Slide> 
             </div>
-            
-
         </>
-
-        
     );
 };
 

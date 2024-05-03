@@ -68,7 +68,8 @@ function Footer() {
                         <Link to='/' className = "ml-2 text-white font-light clamp-text-1" >IG</Link>
                         <Link to='/' className = "ml-2 text-white font-light clamp-text-1">Threads</Link>
                         <Link to='/' className = "ml-2 text-white font-light clamp-text-1">X</Link>
-                        <Link to='/' className = "ml-2 text-white font-light clamp-text-1">Reddit</Link>
+                        <Link to='/' className ="ml-2 text-white font-light clamp-text-1">Reddit</Link>
+                        <Link to='/signup' className = "ml-2 text-white font-light clamp-text-1">Sign Up</Link>
                     </div>
                     <Copyright/>
                 </div>
