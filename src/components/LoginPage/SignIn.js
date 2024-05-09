@@ -10,6 +10,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 // TODO remove, this demo shouldn't need to reset the theme.
 
@@ -88,12 +90,18 @@ export default function SignIn() {
               style={{backgroundColor: '#00A47D'}}
             >
               <Link to='/signup' style={{ width: '100%'}}>
-                  {'Create Account'}
+                  {'DONT HAVE AN ACCOUNT? CREATE HERE'}
             </Link>
             </Button>
-            <div>
-              Or Sign In With 
+            <div className = 'flex flex-col justify-center items-center mt-5'>
+              <Typography component="p" variant="p" style={{}}>Or continue with</Typography>
+              <div className = 'flex flex-row justify-around items-center w-[50%] m-auto mt-5 '>
+                <FontAwesomeIcon icon={faFacebook} size="2x" />
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+                <FontAwesomeIcon icon={faGoogle} size="2x" />
+              </div>
             </div>
+            
           </Box>
         </Box>
       </Container>
