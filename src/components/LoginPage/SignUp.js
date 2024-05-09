@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -7,9 +8,23 @@ import Checkbox from '@mui/material/Checkbox';
 import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+function Copyright(props) {
+  return (
+    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Cars-talog
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
 // TODO remove, this demo shouldn't need to reset the theme.
 
@@ -31,37 +46,39 @@ export default function SignUp() {
         <CssBaseline />
         <Box
           sx={{
+            marginTop: 8,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            backgroundColor: 'white',
-            height: '100vh',
           }}
         >
-          <Typography component="h1" variant="h4" style={{paddingTop: '1.5rem'}}>
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }} style={{ padding: '1.5rem', borderRadius: '10px' }}>
-            <Grid container spacing={4}>
-              <Grid item xs={12}>
+          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
                 <TextField
+                  autoComplete="given-name"
+                  name="firstName"
                   required
                   fullWidth
                   id="firstName"
                   label="First Name"
-                  name="firstName"
                   autoFocus
-                  style={{boxShadow: '0px 0.5px 1px 0px #000'}} 
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
                   id="lastName"
                   label="Last Name"
                   name="lastName"
-                  style={{boxShadow: '0px 0.5px 1px 0px #000'}} 
+                  autoComplete="family-name"
                 />
               </Grid>
               <Grid item xs={12}>
@@ -72,7 +89,6 @@ export default function SignUp() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
-                  style={{boxShadow: '0px 0.5px 1px 0px #000'}}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -84,34 +100,33 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
-                  style={{boxShadow: '0px 0.5px 1px 0px #000'}}
                 />
               </Grid>
               <Grid item xs={12}>
                 <FormControlLabel
                   control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I accept the Privacy Policy and the Terms of Service."
+                  label="I want to receive inspiration, marketing promotions and updates via email."
                 />
               </Grid>
             </Grid>
-             <Button
+            <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              style={{backgroundColor: '#FFC188'}}
             >
-              Create Account
+              Sign Up
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link to="/login">
-                  Already have an account? <span style={{color: 'blue'}}>Sign in</span>
+                <Link to="/signin">
+                  Already have an account? Sign in
                 </Link>
               </Grid>
             </Grid>
           </Box>
         </Box>
+        <Copyright sx={{ mt: 5 }} />
       </Container>
     </ThemeProvider>
   );
