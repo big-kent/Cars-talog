@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 import theme from '../Theme';
 import { Grid } from '@mui/material';
-import SignIn from './SignIn';
+import SignUp from './SignUp';
 
-const LogIn = () => {
+const Register = () => {
     return ( 
         <>
             <section>
@@ -23,11 +23,11 @@ const LogIn = () => {
                             Browsing every car in no time
                         </Typography> */}
                     </div>
-                    <SignIn></SignIn>
+                    <SignUp></SignUp>
                 </div>
             </section>
         </>
      );
 }
  
-export default LogIn;
+export default Register;
