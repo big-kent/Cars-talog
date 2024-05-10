@@ -5,6 +5,7 @@ import SignUp from "./components/LoginPage/SignUp";
 import LogIn from "./components/LoginPage/LogIn";
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Register from "./components/LoginPage/Register";
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
           <Header />
             <Routes>
               <Route path="/detail" element={<DetailPage/>}></Route>
-              <Route path="/signup" element={<SignUp/>}></Route>
+              <Route path="/signup" element={<Register/>}></Route>
               <Route path="/login" element={<LogIn/>}></Route>
             </Routes>
         </div>
