@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import Typography from '@mui/material/Typography';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 
 import { Link } from 'react-router-dom';
 
 import theme from '../Theme';
-import SignIn from './SignIn';
+import SignUp from './SignUp';
 
-const LogIn = () => {
+const Register = () => {
     return ( 
             <section>
                 <div className='max-w-full m-auto rounded-x grid grid-cols-[3fr_1fr]' >
-                   <div className='relative'>
+                    <div className='relative'>
                         <img className='w-full h-full absolute' src="https://image.freepik.com/free-photo/cars-desert_157912-173.jpg"></img>
                         <div className = 'absolute mt-32 ml-60 w-[40%]'>
                             <Typography theme={theme} variant='h3' component='h3' style={{ paddingBottom: '2rem', fontWeight: 'bolder' }}>
@@ -22,10 +23,10 @@ const LogIn = () => {
                             </Typography>
                         </div>
                     </div>
-                    <SignIn></SignIn>
+                    <SignUp></SignUp>
                 </div>
             </section>
      );
 }
  
-export default LogIn;
+export default Register;

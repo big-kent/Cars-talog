@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -8,7 +7,6 @@ import Checkbox from '@mui/material/Checkbox';
 import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -40,7 +38,6 @@ export default function SignIn() {
             alignItems: 'center',
             backgroundColor: 'white',
             height: '100vh',
-            boxShadow: '0px 0px 20px 5px rgba(193, 64, 35, 1)'
           }}
         >
           <Typography component="h1" variant="h4" style={{paddingTop: '1.5rem'}}>
@@ -51,11 +48,12 @@ export default function SignIn() {
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="username"
+              label="Username"
+              name="username"
+              autoComplete="name"
               autoFocus
+              style={{boxShadow: '0px 0.5px 1px 0px #000'}}
             />
             <TextField
               margin="normal"
@@ -66,6 +64,7 @@ export default function SignIn() {
               type="password"
               id="password"
               autoComplete="current-password"
+              style={{boxShadow: '0px 0.5px 1px 0px #000'}}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
