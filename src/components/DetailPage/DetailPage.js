@@ -9,12 +9,12 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
 
-import DotsStepper from '../DetailPage/DotsStepper';
-import ImagesGrid from '../DetailPage/ImagesGrid';
-import ImagesGrid2 from '../DetailPage/ImagesGrid2';
-import Specification from '../DetailPage/Specification';
+import DotsStepper from './DotsStepper';
+import ImagesGrid from './ImagesGrid';
+import ImagesGrid2 from './ImagesGrid2';
+import Specification from './Specification';
 import theme from '../Theme';
-import ChooseColor from '../DetailPage/ChooseColor';
+import ChooseColor from './ChooseColor';
 import YearAndTotalBuyer from './YearAndTotalBuyer';
 
 const DetailPage = () => {
