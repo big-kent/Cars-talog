@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
 import theme from '../Theme';
-import SignIn from './SignIn';
+import SignInForm from './SignInForm';
 
 const LogIn = () => {
     return ( 
@@ -22,7 +22,7 @@ const LogIn = () => {
                             </Typography>
                         </div>
                     </div>
-                    <SignIn></SignIn>
+                    <SignInForm></SignInForm>
                 </div>
             </section>
      );
