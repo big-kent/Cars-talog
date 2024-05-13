@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arvo', Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main-green{
+  background-color: #004225;
+}
+.clamp-text-1{
+  font-size: clamp(0.5rem, 0.4000rem + 0.4444vw, 0.8rem);
+}
+.clamp-text-2 {
+  font-size: clamp(0.6rem, 0.4667rem + 0.5926vw, 1rem);
+}
+.clamp-logo{
+  width: clamp(5rem, 6.6667rem + 14.8148vw, 50rem);
+  height: auto;
+
+}
+.clamp-h1{
+  font-size: clamp(2rem, 0.5915rem + 6.0094vw, 6rem);
+}
+.clamp-overall{
+  width: clamp(0.6rem, 0.4667rem + 0.5926vw, 1rem);
+  height: clamp(0.6rem, 0.4667rem + 0.5926vw, 1rem);
+}
+.m-center{
+  margin: 0 auto;
+}
+.each-slide-effect > div {
+  border: 10px solid black;
+}
+.mobile-grid-show {
+  grid-template-rows: 1fr 2fr 1fr 2fr;
+}
+.pc-spec-show{
+  grid-template-rows: 2fr 3fr;
+}
+.indicator {
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  border: 1px #666 solid;
+  border-radius: 50%;
+  margin: 15px;
+  width: clamp(0.6rem, 0.4667rem + 0.5926vw, 1rem);
+  height: clamp(0.6rem, 0.4667rem + 0.5926vw, 1rem);
+}
+
+.indicator.active {
+  color: #fff;
+  background: #000000;
+}
+
+.max-carousel{
+  width: 100vw;
+  height: auto;
+}
+
+.spec-animation {
+  animation: Spec ease-out 0.35s forwards;
+}
+
+@keyframes Spec {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-24px);
+  }
+}
+
+@layer components{
+  .footer-link{
+    @apply text-white font-light hover:underline;
+  }
+}

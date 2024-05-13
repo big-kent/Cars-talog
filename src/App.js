@@ -1,22 +1,29 @@
-import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import OurTeam from "./Pages/OurTeam";
-import Contact from "./Pages/Contact";
+import  Header  from "./layouts/Header";
+
+import DetailPage from "./components/DetailPage/DetailPage";
+import SignUp from "./components/LoginPage/SignUp";
+import LogIn from "./components/LoginPage/LogIn";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Register from "./components/LoginPage/Register";
 
 function App() {
+
+
   return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="our-team" element={<OurTeam />} />
-        <Route path="contact" element={<Contact />} />
-      </Routes>
-    </>
-  );
+    <Router>
+      <div className ="App">
+        <div className ="content">
+          <Header />
+            <Routes>
+              <Route path="/detail" element={<DetailPage/>}></Route>
+              <Route path="/signup" element={<Register/>}></Route>
+              <Route path="/login" element={<LogIn/>}></Route>
+            </Routes>
+        </div>
+      </div>
+    </Router>
+  )
 }
 
 export default App;
