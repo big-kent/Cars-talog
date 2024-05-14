@@ -25,6 +25,7 @@ const LogosPage = () => {
   const uniqueManufacturers = [...new Set(carManufacturers.map(m => m.Make))].map(name => {
     return carManufacturers.find(m => m.Make === name);
   });
+  
 
   return (
     <div>

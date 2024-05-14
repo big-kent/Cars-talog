@@ -7,13 +7,12 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Typography from '@mui/material/Typography';
 import { useParams } from 'react-router-dom';
 
-
-
 import { ReactComponent as BannerImmage } from '../../assets/images/Car Image.svg';
 
 import { Slide } from 'react-slideshow-image';
 import { Zoom } from 'react-slideshow-image';
 import theme from '../Theme';
+
 
 import 'react-slideshow-image/dist/styles.css';
 
@@ -28,7 +27,10 @@ const DotsStepper = () => {
                         <ChevronRightIcon className='mr-12 bg-white rounded-full' fontSize='large'/>
                     </IconButton>
     }
+
+
     const { model } = useParams();
+
 
     return (
         <>
