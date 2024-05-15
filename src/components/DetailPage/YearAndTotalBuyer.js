@@ -1,13 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Typography from '@mui/material/Typography';
-
-import { useTheme } from '@mui/material/styles';
 import YearCounter from './YearCounter';
-import theme from '../Theme';
+import useFetch from '../useFetch';
+import { useParams } from 'react-router-dom';
 
 const YearAndTotalBuyer = () => {
   const [isInView, setIsInView] = useState(false);
   const ref = useRef(null);
+  const { data: carManufacturers, loading, error } = useFetch(`http://localhost:8000/cars`);
+  const { model } = useParams();
+  const [filteredModels, setFilteredModels] = useState([]);
+
+  useEffect(() => {
+    if (!loading && carManufacturers) {
+      const filtered = carManufacturers.filter((car) => car.Model === model);
+      setFilteredModels(filtered);
+    }
+  }, [loading, carManufacturers, model]);
+
+  console.log(filteredModels);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,7 +48,6 @@ const YearAndTotalBuyer = () => {
     >
       <div className="flex flex-col justify-center items-center border-solid border-r-black border-r-2">
         <Typography
-          theme={theme}
           variant="h6"
           style={{
             align: 'center',
@@ -49,14 +59,13 @@ const YearAndTotalBuyer = () => {
         >
           production year
         </Typography>
-        <YearCounter yearData={2005}></YearCounter>
+        <YearCounter yearData={filteredModels.length ? filteredModels[0].Year : 2005}></YearCounter>
       </div>
       <div></div>
       <div className="border-solid border-r-black border-r-2"></div>
       <div className="flex flex-col justify-center items-center order-4">
         <YearCounter yearData={4000000}></YearCounter>
         <Typography
-          theme={theme}
           variant="h6"
           style={{
             align: 'center',

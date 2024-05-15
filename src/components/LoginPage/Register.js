@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
 import theme from '../Theme';
-import SignUp from './SignUp';
+import SignUpForm from './SignUpForm';
 
 const Register = () => {
     return ( 
@@ -23,7 +23,7 @@ const Register = () => {
                             </Typography>
                         </div>
                     </div>
-                    <SignUp></SignUp>
+                    <SignUpForm></SignUpForm>
                 </div>
             </section>
      );

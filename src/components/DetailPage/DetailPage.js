@@ -6,7 +6,7 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 
 
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
 import DotsStepper from './DotsStepper';
@@ -18,6 +18,8 @@ import ChooseColor from './ChooseColor';
 import YearAndTotalBuyer from './YearAndTotalBuyer';
 
 const DetailPage = () => {
+
+    const { model } = useParams();
   
 
     return ( 
