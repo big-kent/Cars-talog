@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import theme from '../Theme';
 import useFetch from '../useFetch';
+import Footer from '../Footer';
 
 const LogosPage = () => {
   const { data: carManufacturers, loading, error } = useFetch(`http://localhost:8000/cars`);
@@ -30,14 +31,15 @@ const LogosPage = () => {
   return (
     <div>
       <Typography theme={theme} variant='h1' align='center' fontWeight={500} marginBottom={3}>Browse car collection</Typography>
-      <section className ="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-4 max-w-[1024px] m-auto">
+      <section className ="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-4 max-w-[1024px] m-auto mb-10">
       {uniqueManufacturers.map((manufacturer, index) => (
         <div key={index} className ="flex flex-col items-center cursor-pointer " onClick={() => navigate(`/${manufacturer.Make}`)}> 
           <div className ="w-40 h-20 bg-gray-300 mb-3 hover:scale-125" />
           <p className ="text-center">{manufacturer.Make}</p>
         </div>
       ))}
-    </section>
+      </section>
+      <Footer></Footer>
     </div>
   );
 };

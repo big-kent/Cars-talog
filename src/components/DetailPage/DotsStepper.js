@@ -7,7 +7,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Typography from '@mui/material/Typography';
 import { useParams } from 'react-router-dom';
 
-import { ReactComponent as BannerImmage } from '../../assets/images/Car Image.svg';
+import { ReactComponent as BannerImmage } from '../../images/Car Image.svg';
 
 import { Slide } from 'react-slideshow-image';
 import { Zoom } from 'react-slideshow-image';

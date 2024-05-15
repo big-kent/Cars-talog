@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import theme from '../Theme';
 import useFetch from '../useFetch';
+import Footer from '../Footer';
 
 const SpecificBrand = () => {
   const { make } = useParams();
@@ -27,10 +28,10 @@ const SpecificBrand = () => {
       <Typography variant="h3" align="center" fontWeight={500} marginBottom={3}>
         {make}
       </Typography>
-      <Typography variant="body1" align="center" fontWeight={500} marginBottom={3}>
+      <Typography variant="body1" align="center" fontWeight={300} marginBottom={3}>
         These are the results of {make}. Select one from the list below.
       </Typography>
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8 max-w-[1024px] m-auto">
+      <section className ="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8 max-w-[1024px] m-auto mb-10">
         {filteredCars.map((car, index) => (
           <div
             key={index}
@@ -42,6 +43,7 @@ const SpecificBrand = () => {
           </div>
         ))}
       </section>
+      <Footer></Footer>
     </div>
   );
 };

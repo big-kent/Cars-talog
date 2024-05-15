@@ -1,0 +1,88 @@
+import GolfR from "../images/cars-data/golfr.png";
+import AudiA1 from "../images/cars-data/audia1.png";
+import BmwM2 from "../images/cars-data/bmwm2series.png";
+import Benz from "../images/cars-data/mercedesc.png";
+import VwTiguan from "../images/cars-data/vwtiguan.png";
+import AudiQ7 from "../images/cars-data/audiq7.png";
+
+export const CAR_DATA = [
+  {
+    id: 1,
+    name: "VW Golf R",
+    price: "45",
+    img: GolfR,
+    model: "Golf R",
+    mark: "Volkswagen",
+    year: "2019",
+    doors: "4/5",
+    air: "Yes",
+    transmission: "Manual",
+    fuel: "Gasoline",
+  },
+
+  {
+    id: 2,
+    name: "Audi A1 S-Line",
+    price: "30",
+    img: AudiA1,
+    model: "Audi",
+    mark: "A1 S-Line",
+    year: "2020",
+    doors: "4/5",
+    air: "Yes",
+    transmission: "Manual",
+    fuel: "Gasoline",
+  },
+  {
+    id: 3,
+    name: "BMW M2 Series",
+    price: "60",
+    img: BmwM2,
+    model: "M2",
+    mark: "BMW",
+    year: "2019",
+    doors: "2/3",
+    air: "Yes",
+    transmission: "Automatic",
+    fuel: "Gasoline",
+  },
+  {
+    id: 4,
+    name: "Mercedes-Benz C",
+    price: "50",
+    img: Benz,
+    model: "Benz C-Class",
+    mark: "Mercedes",
+    year: "2020",
+    doors: "4/5",
+    air: "Yes",
+    transmission: "Automatic",
+    fuel: "Diesel",
+  },
+  {
+    id: 5,
+    name: "VW Tiguan SUV",
+    price: "35",
+    img: VwTiguan,
+    model: "Tiguan SUV",
+    mark: "Volkswagen",
+    year: "2017",
+    doors: "4/5",
+    air: "Yes",
+    transmission: "Automatic",
+    fuel: "Gasoline",
+  },
+  {
+    id: 6,
+    name: "Audi Q7 SUV",
+    price: "45",
+    img: AudiQ7,
+    model: "Q7 SUV",
+    mark: "Audi",
+    year: "2018",
+    doors: "4/5",
+    air: "Yes",
+    transmission: "Automatic",
+    fuel: "Gasoline",
+  },
+];
