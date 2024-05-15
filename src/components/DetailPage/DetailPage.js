@@ -16,6 +16,7 @@ import Specification from './Specification';
 import theme from '../Theme';
 import ChooseColor from './ChooseColor';
 import YearAndTotalBuyer from './YearAndTotalBuyer';
+import Footer from '../Footer';
 
 const DetailPage = () => {
 
@@ -36,6 +37,7 @@ const DetailPage = () => {
             <Specification></Specification> 
             <ImagesGrid2></ImagesGrid2>
             <ChooseColor></ChooseColor>
+            <Footer></Footer>
         </main>
      );
 }
