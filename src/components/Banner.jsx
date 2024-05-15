@@ -23,7 +23,7 @@ const Banner = () => {
                 Find Your Best Dream Car - Trust us to deliver your perfect ride. With top-quality selections, we'll match you with your dream car effortlessly. Your ideal drive is closer than you think.
               </p>
               <div className="banner-btns-container">
-                <Link className="btn btn-view-all">
+                <Link to='/logo' className="btn btn-view-all">
                   View all Cars <i className="fa-solid fa-circle-check"></i>
                 </Link>
                 <Link className="btn btn-learn-more" to="/Cardictionaryalpha">

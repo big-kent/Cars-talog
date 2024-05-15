@@ -57,8 +57,8 @@ const FindCar = () => {
     if (
       Location === "" ||
       Budget === "" ||
-      pickUpTime === "" ||
-      dropOffTime === "" ||
+      manufacturingDate === "" ||
+      color === "" ||
       carSelection === ""
     ) {
       errorMsg.style.display = "flex";
@@ -91,8 +91,8 @@ const FindCar = () => {
   const [carSelection, setCarSelection] = useState("");
   const [Location, setLocation] = useState("");
   const [Budget, setBudget] = useState("");
-  const [pickUpTime, setPickUpTime] = useState("");
-  const [dropOffTime, setDropOffTime] = useState("");
+  const [manufacturingDate, setmanufacturingDate] = useState("");
+  const [color, setcolor] = useState("");
   const [carImg, setCarImg] = useState("");
 
   // handle book car form inputs
@@ -109,12 +109,12 @@ const FindCar = () => {
     setBudget(e.target.value);
   };
 
-  const handlePickUpTime = (e) => {
-    setPickUpTime(e.target.value);
+  const handlemanufacturingDate = (e) => {
+    setmanufacturingDate(e.target.value);
   };
 
-  const handleDropOffTime = (e) => {
-    setDropOffTime(e.target.value);
+  const handlecolor = (e) => {
+    setcolor(e.target.value);
   };
 
   // based on car value name show car img in modal
@@ -216,8 +216,8 @@ const FindCar = () => {
                   </label>
                   <input
                     id="picktime"
-                    value={pickUpTime}
-                    onChange={handlePickUpTime}
+                    value={manufacturingDate}
+                    onChange={handlemanufacturingDate}
                     type="date"
                   ></input>
                 </div>
@@ -252,11 +252,10 @@ const FindCar = () => {
         <div className="booking-modal-info">
           <h4>
             <i className="fa-solid fa-circle-info"></i> Upon completing this
-            reservation enquiry, you will receive:
+            purchasing, you will receive:
           </h4>
           <p>
-            Your rental voucher to produce on arrival at the rental desk and a
-            toll-free customer support number.
+            Your purchase voucher is completed!
           </p>
         </div>
 
@@ -268,9 +267,9 @@ const FindCar = () => {
               <span>
                 <i className="fa-solid fa-location-dot"></i>
                 <div>
-                  <h6>Pick-Up Date & Time</h6>
+                  <h6>Manufacturing Date</h6>
                   <p>
-                    {pickUpTime}{" "}
+                    {manufacturingDate}{" "}
                     <input type="time" className="input-time"></input>
                   </p>
                 </div>
@@ -281,9 +280,9 @@ const FindCar = () => {
               <span>
                 <i className="fa-solid fa-location-dot"></i>
                 <div>
-                  <h6>Drop-Off Date & Time</h6>
+                  <h6>Color</h6>
                   <p>
-                    {dropOffTime}{" "}
+                    {color}{" "}
                     <input type="time" className="input-time"></input>
                   </p>
                 </div>
@@ -294,7 +293,7 @@ const FindCar = () => {
               <span>
                 <i className="fa-solid fa-calendar-days"></i>
                 <div>
-                  <h6>Pick-Up Location</h6>
+                  <h6>Location</h6>
                   <p>{Location}</p>
                 </div>
               </span>
@@ -304,7 +303,7 @@ const FindCar = () => {
               <span>
                 <i className="fa-solid fa-calendar-days"></i>
                 <div>
-                  <h6>Drop-Off Location</h6>
+                  <h6>Budget</h6>
                   <p>{Budget}</p>
                 </div>
               </span>

@@ -34,7 +34,7 @@ const Footer = () => {
                   rel="noreferrer"
                   href="https://github.com/"
                 >
-                  Coded by Trung
+                  Coder: Nguyen Quoc Trung & Ly Minh Phuc
                 </a>
               </li>
             </ul>
@@ -73,7 +73,7 @@ const Footer = () => {
               </li>
               <li>
                 <button className="submit-email">
-                  <i class="fa-regular fa-paper-plane"></i>
+                  <i class="fa-regular fa-paper-plane">SUBSCRIBE</i>
                 </button>
               </li>
             </ul>
