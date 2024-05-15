@@ -13,7 +13,6 @@ import { Slide } from 'react-slideshow-image';
 import { Zoom } from 'react-slideshow-image';
 import theme from '../Theme';
 
-
 import 'react-slideshow-image/dist/styles.css';
 
 const DotsStepper = () => {
