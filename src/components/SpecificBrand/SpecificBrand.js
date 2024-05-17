@@ -25,21 +25,22 @@ const SpecificBrand = () => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <Typography variant="h3" align="center" fontWeight={500} marginBottom={3}>
+      <Typography variant="h2" align="center" fontWeight={500} marginBottom={3}>
         {make}
       </Typography>
-      <Typography variant="body1" align="center" fontWeight={300} marginBottom={3}>
-        These are the results of {make}. Select one from the list below.
+      <Typography variant="h5" align="center" fontWeight={300} marginBottom={3}>
+        There are {filteredCars.length} of {make}. Select one from the list below.
       </Typography>
-      <section className ="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8 max-w-[1024px] m-auto mb-10">
+      <section className ="flex flex-col w-[90%] ml-8 mr-8 justify-center items-start">
         {filteredCars.map((car, index) => (
           <div
             key={index}
-            className="flex flex-col items-center cursor-pointer"
+            className ="flex flex-col items-center cursor-pointer w-full"
             onClick={() => handleCarClick(car)}
           >
-            <div className="w-40 h-20 bg-gray-300 mb-3 hover:scale-125" />
-            <Typography variant="body2">{car.Model}</Typography>
+            <div className =" w-full h-20 hover:bg-gray-300 mb-3 border-b-black border-b border-solid">
+              <Typography variant="h4">{car.Model}</Typography>
+            </div>
           </div>
         ))}
       </section>

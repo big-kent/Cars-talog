@@ -14,6 +14,7 @@ const LogosPage = () => {
   const [error, setError] = useState(null);
 
   const navigate = useNavigate();
+  console.log(logos)
 
   useEffect(() => {
     const fetchLogos = async () => {
@@ -25,14 +26,12 @@ const LogosPage = () => {
           // Extract the file name from the path
           const match = logo.match(/\/([^\/]+)\.[^\/]+$/);
           let name = match ? match[1] : `Logo ${index + 1}`; // Default name if no match
-          
+
           // Clean up the name by removing any trailing jumbled numbers and texts
-          name = name.replace(/\..*$/, ''); // Remove the extension and any trailing numbers
+          name = name.replace(/\..*$/, ''); // Remove the extension
 
           return { name, url: logo };
         });
-
-        console.log('Processed logos list:', logosList); // Debugging: Log processed logos list
 
         // Sort the logos alphabetically by name
         logosList.sort((a, b) => a.name.localeCompare(b.name));
@@ -90,7 +89,7 @@ const LogosPage = () => {
             <img
               src={manufacturer.url}
               alt={manufacturer.name}
-              className="w-40 h-20 bg-gray-300 mb-3 hover:scale-125"
+              className="w-40 h-20 mb-3 hover:scale-125"
             />
             <p className="text-center">{manufacturer.name}</p>
           </div>
