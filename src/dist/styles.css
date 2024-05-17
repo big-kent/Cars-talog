@@ -2053,3 +2053,13 @@ footer {
   box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.6);
   background-color: #e47113;
 }
+
+/* Add this to your CSS file */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right .advanced-search-bar {
+  margin-right: 20px; /* Adjust the margin as needed */
+}
