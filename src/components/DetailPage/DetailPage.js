@@ -28,7 +28,7 @@ const DetailPage = () => {
             <DotsStepper></DotsStepper>
             <div className ='content-wrapper flex flex-row- justify-center'>
                 <div className ='content-container flex flex-col items-center text-center pb-10'>
-                    <Typography theme={theme} variant='h1' style={{ align: 'center', marginTop: '2rem', fontFamily: 'Arvo', fontStyle: 'serif', textTransform: 'uppercase' }}>title 1</Typography>
+                    <Typography theme={theme} variant='h1' style={{ align: 'center', marginTop: '2rem', fontFamily: 'Arvo', fontStyle: 'serif', textTransform: 'uppercase' }}>comfortable experience</Typography>
                     <Typography theme={theme} variant="p">Lorem ipsum harmony visibility Anna mechanic travelling </Typography>
                 </div>
             </div> 
