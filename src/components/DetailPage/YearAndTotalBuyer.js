@@ -18,8 +18,6 @@ const YearAndTotalBuyer = () => {
     }
   }, [loading, carManufacturers, model]);
 
-  console.log(filteredModels);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {

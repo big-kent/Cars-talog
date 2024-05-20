@@ -14,8 +14,8 @@ const ImagesGrid = () => {
     const { model } = useParams();
 
     const images = [
-        "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-        "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
+        "https://th.bing.com/th/id/OIP.EKF3a6KEsyMCuyNKhRdI9QAAAA?rs=1&pid=ImgDetMain",
+        "https://res.cloudinary.com/caradvice/image/private/q_auto/v1574881502/jjw3bj62mnspvfpmobfd.jpg",
         "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     ];
     

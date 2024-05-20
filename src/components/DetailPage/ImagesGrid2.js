@@ -12,9 +12,9 @@ const ImagesGrid2 = () => {
 
   const { model } = useFetch();
     const images = [
-        "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-        "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
-        "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+        "https://cdn.carbuzz.com/gallery-images/1600/1151000/400/1151491.jpg",
+        "https://th.bing.com/th/id/OIP.juQNabPEFXAE9BFdmdtGHQAAAA?rs=1&pid=ImgDetMain",
+        "https://th.bing.com/th/id/OIP.OfpiVEd2e73EVvuCL-iHugHaE8?pid=ImgDet&w=474&h=316&rs=1",
     ];
     
   return (

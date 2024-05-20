@@ -29,7 +29,7 @@ const DetailPage = () => {
             <div className ='content-wrapper flex flex-row- justify-center'>
                 <div className ='content-container flex flex-col items-center text-center pb-10'>
                     <Typography theme={theme} variant='h1' style={{ align: 'center', marginTop: '2rem', fontFamily: 'Arvo', fontStyle: 'serif', textTransform: 'uppercase' }}>comfortable experience</Typography>
-                    <Typography theme={theme} variant="p">Lorem ipsum harmony visibility Anna mechanic travelling </Typography>
+                    <Typography theme={theme} variant="p">The harmonious blend of comfort, technology, and serene surroundings makes for a truly enjoyable journey </Typography>
                 </div>
             </div> 
             <YearAndTotalBuyer></YearAndTotalBuyer>
