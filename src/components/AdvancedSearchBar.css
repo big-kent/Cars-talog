@@ -1,0 +1,48 @@
+/* AdvancedSearchBar.css */
+.advanced-search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+  }
+  
+  .search-group {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 150px); /* Adjust width to make the layout shorter */
+    margin-bottom: 10px; /* Add margin at the bottom for spacing */
+    margin-left: 15px;
+  }
+  
+  .search-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px; /* Adjust font size */
+  }
+  
+  .search-group input,
+  .search-group select {
+    padding: 10px; /* Adjust padding to make the input/select shorter */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; /* Adjust font size */
+  }
+  
+  .search-button {
+    padding: 8px 16px; /* Adjust padding */
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px; /* Adjust font size */
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center; /* Center the search button */
+    margin-left: 15px;
+  }
+  
+  .search-button:hover {
+    background-color: darkorange;
+  }
+  
