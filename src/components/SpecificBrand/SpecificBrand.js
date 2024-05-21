@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import theme from '../Theme';
 import useFetch from '../useFetch';
 import Footer from '../Footer';
 

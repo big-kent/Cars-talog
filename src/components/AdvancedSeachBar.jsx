@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './AdvancedSearchBar.css'; // Ensure the path is correct
 
 const AdvancedSearchBar = ({ onSearch }) => {
@@ -14,12 +15,18 @@ const AdvancedSearchBar = ({ onSearch }) => {
   const [vehicleClasses, setVehicleClasses] = useState([]);
   const [driveTypes, setDriveTypes] = useState([]);
   const [filteredModels, setFilteredModels] = useState([]);
+  const [filteredCylinders, setFilteredCylinders] = useState([]);
+  const [filteredVehicleClasses, setFilteredVehicleClasses] = useState([]);
+  const [filteredDrives, setFilteredDrives] = useState([]);
+  const [cars, setCars] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Fetch car data from the API
     axios.get('http://localhost:8000/cars')
       .then(response => {
         const cars = response.data;
+        setCars(cars);
 
         // Extract unique values for each filter
         const brands = [...new Set(cars.map(car => car.Make))];
@@ -40,33 +47,33 @@ const AdvancedSearchBar = ({ onSearch }) => {
   }, []);
 
   useEffect(() => {
-    // Filter models based on the selected brand
     if (make) {
-      setFilteredModels(carModels.filter(model => {
-        const car = car.find(car => car.Make === make && car.Model === model);
-        return car !== undefined;
-      }));
+      // Filter models, cylinders, vehicle classes, and drives based on the selected brand
+      const filteredCars = cars.filter(car => car.Make === make);
+      
+      const models = [...new Set(filteredCars.map(car => car.Model))];
+      const cylinders = [...new Set(filteredCars.map(car => car.Cylinders))];
+      const vehicleClasses = [...new Set(filteredCars.map(car => car['Vehicle Class']))];
+      const drives = [...new Set(filteredCars.map(car => car.Drive))];
+
+      setFilteredModels(models);
+      setFilteredCylinders(cylinders);
+      setFilteredVehicleClasses(vehicleClasses);
+      setFilteredDrives(drives);
     } else {
       setFilteredModels(carModels);
+      setFilteredCylinders(cylinderTypes);
+      setFilteredVehicleClasses(vehicleClasses);
+      setFilteredDrives(driveTypes);
     }
-  }, [make, carModels]);
+  }, [make, carModels, cylinderTypes, vehicleClasses, driveTypes, cars]);
 
   const handleSearch = () => {
     onSearch({ make, model, cylinders, vehicleClass, drive });
-  };
 
-  const handleMakeChange = (e) => {
-    const value = e.target.value;
-    setMake(value);
-
-    // Filter models based on the selected brand
-    if (value) {
-      setFilteredModels(carModels.filter(model => {
-        const car = car.find(car => car.Make === value && car.Model === model);
-        return car !== undefined;
-      }));
-    } else {
-      setFilteredModels(carModels);
+    if (make) {
+      // Navigate to the specific brand page
+      navigate(`/${make}`);
     }
   };
 
@@ -82,7 +89,7 @@ const AdvancedSearchBar = ({ onSearch }) => {
         </select>
       </div>
       <div className="search-group">
-        <label htmlFor="model">Select Model</label>
+        <label htmlFor="model">Select Model (Model)</label>
         <select id="model" value={model} onChange={(e) => setModel(e.target.value)}>
           <option value="">Select Model</option>
           {filteredModels.map((model, index) => (
@@ -91,19 +98,19 @@ const AdvancedSearchBar = ({ onSearch }) => {
         </select>
       </div>
       <div className="search-group">
-        <label htmlFor="cylinders">Cylinders Type</label>
+        <label htmlFor="cylinders">Cylinders Type (Cylinders)</label>
         <select id="cylinders" value={cylinders} onChange={(e) => setCylinders(e.target.value)}>
           <option value="">Select Cylinders</option>
-          {cylinderTypes.map((cylinder, index) => (
+          {filteredCylinders.map((cylinder, index) => (
             <option key={index} value={cylinder}>{cylinder}</option>
           ))}
         </select>
       </div>
       <div className="search-group">
-        <label htmlFor="vehicleClass">Class</label>
+        <label htmlFor="vehicleClass">Class (Vehicle Class)</label>
         <select id="vehicleClass" value={vehicleClass} onChange={(e) => setVehicleClass(e.target.value)}>
           <option value="">Select Class</option>
-          {vehicleClasses.map((vehicleClass, index) => (
+          {filteredVehicleClasses.map((vehicleClass, index) => (
             <option key={index} value={vehicleClass}>{vehicleClass}</option>
           ))}
         </select>
@@ -112,7 +119,7 @@ const AdvancedSearchBar = ({ onSearch }) => {
         <label htmlFor="drive">Type Drive (Drive)</label>
         <select id="drive" value={drive} onChange={(e) => setDrive(e.target.value)}>
           <option value="">Select Drive</option>
-          {driveTypes.map((drive, index) => (
+          {filteredDrives.map((drive, index) => (
             <option key={index} value={drive}>{drive}</option>
           ))}
         </select>
